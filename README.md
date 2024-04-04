@@ -2,7 +2,7 @@
 
 A retro looking Todo app that allows users to create, mark complete, delete, and filter todo items.
 
-![Screenshot of application](https://assets.digitalocean.com/articles/alligator/boo.svg "Screenshot of application")
+![Screenshot of application](https://raw.githubusercontent.com/larsonjj/cs50_retro_todos/main/screenshot.png)
 
 ## Technologies Used
 
