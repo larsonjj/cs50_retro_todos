@@ -2,7 +2,11 @@ import logoArt from "./assets/ascii/logo_art";
 import "./Logo.css";
 
 function Logo() {
-  return <pre className="logo">{logoArt}</pre>;
+  return (
+    <div className="logo">
+      <pre className="art">{logoArt}</pre>
+    </div>
+  );
 }
 
 export default Logo;

@@ -1,4 +1,9 @@
 .logo {
+    display: flex;
+    justify-content: center;
+}
+
+.art {
     font-family: monospace;
     white-space: pre;
     font-size: 0.5rem;
