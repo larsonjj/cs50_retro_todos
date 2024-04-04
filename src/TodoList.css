@@ -43,3 +43,101 @@
 .addButton:hover {
     background-color: #666;
 }
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.listItem.done {
+    opacity: 0.5;
+}
+
+.listItem.done .text {
+    text-decoration: line-through;
+}
+
+.checkbox {
+    position: relative;
+    top: 2px;
+    left: 8px;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    color: #bbb;
+    min-width: 36px;
+    height: 36px;
+    border: 1px solid #bbb;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.checkbox:hover {
+    background-color: #666;
+}
+
+.checkbox:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #fff;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+}
+
+.checkbox:checked:before {
+    transform: scale(1);
+}
+
+.text {
+    padding: 1rem;
+    margin-left: 8px;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #bbb;
+
+}
+
+.deleteButton {
+    background-color: transparent;
+    border: 1px solid #ff5454;
+    color: transparent;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    min-width: 36px;
+    position: relative;
+    right: 12px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 0;
+    top: 1px;
+}
+
+.deleteButton:after {
+    content: "×";
+    position: absolute;
+    color:#fff;
+    top: 16px;
+    left: 10px;
+    color: #ff5454;
+    font-size: 24px;
+}
+
+.deleteButton:hover {
+    background-color: #590101;
+}
