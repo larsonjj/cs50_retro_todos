@@ -19,4 +19,4 @@ The Retro Todo App is a retro-console inspired todo application that brings back
 
 ## License
 
-This project is licensed under the [MIT License]().
+This project is licensed under the [MIT License](https://raw.githubusercontent.com/larsonjj/cs50_retro_todos/main/LICENSE).
