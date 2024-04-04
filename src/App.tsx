@@ -1,19 +1,26 @@
-import React, { useState } from "react";
 import Logo from "./Logo.tsx";
+import TodoList from "./TodoList.tsx";
 import "./App.css";
 
-interface TodoItem {
-  id: number;
-  text: string;
-  done: boolean;
-}
-
 function App() {
-  const [todos, setTodos] = useState([] as TodoItem[]);
-
   return (
     <div className="app">
-      <Logo />
+      <header className="header">
+        <Logo />
+      </header>
+      <main>
+        <TodoList />
+      </main>
+      <footer className="footer">
+        <p className="footerMessage">
+          Made with <span className="heart">♥</span> by{" "}
+          <a href="https://github.com/larsonjj" target="_blank">
+            @larsonjj
+          </a>
+          <br />
+          <span className="subMessage">CS50 course final project</span>
+        </p>
+      </footer>
     </div>
   );
 }

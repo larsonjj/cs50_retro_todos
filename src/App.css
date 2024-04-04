@@ -3,6 +3,27 @@
     width: 100%;
 }
 
+.header {
+    padding: 1rem;
+}
+
+.footer {
+    padding: 1rem;
+}
+
+.footerMessage {
+    text-align: center;
+}
+
+.subMessage {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.heart {
+    color: #ff5454;
+}
+
 @media screen and (min-width: 480px) {
     .app {
         max-width: 640px;
