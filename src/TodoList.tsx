@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./TodoList.css";
 
 interface TodoItem {
@@ -14,8 +14,26 @@ enum Filter {
 }
 
 function App() {
-  const [todos, setTodos] = useState([] as TodoItem[]);
-  const [filter, setFilter] = useState(Filter.All);
+  const [todos, setTodos] = useState(() => {
+    const todos = localStorage.getItem("todos");
+    if (todos) {
+      return JSON.parse(todos) as TodoItem[];
+    }
+    return [] as TodoItem[];
+  });
+
+  const [filter, setFilter] = useState(() => {
+    const filter = localStorage.getItem("filter");
+    if (filter) {
+      return JSON.parse(filter) as Filter;
+    }
+    return Filter.All;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("filter", JSON.stringify(filter));
+  }, [todos, filter]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
